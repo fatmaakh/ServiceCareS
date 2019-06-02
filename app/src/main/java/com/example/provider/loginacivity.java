@@ -77,6 +77,8 @@ public class loginacivity extends AppCompatActivity {
                                                 .edit()
                                                 .putString("Username", email.getText().toString())
                                                 .apply();
+
+                                        Current.current_User = new User(email.getText().toString() , ppwd.getText().toString());
                                         startActivity(new Intent(loginacivity.this,providerhActivity.class));
                                     }
                                 }

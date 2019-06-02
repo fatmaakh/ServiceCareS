@@ -30,6 +30,7 @@ public class getrequest {
                 nourhan.setWorkername(rs.getString(6));
                 nourhan.setUsername(rs.getString(7));
                 nourhan.setTime(rs.getString(8));
+                nourhan.setAddress(rs.getString(9));
 
                 data.add(nourhan);
             }

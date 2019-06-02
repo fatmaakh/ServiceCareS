@@ -2,7 +2,7 @@ package com.example.provider;
 
 public class request {
 
-    String reqno,date,notes,latitude,longitude,workername,username,time;
+    String reqno,date,notes,latitude,longitude,workername,username,time , address;
 
     public String getReqno() {
         return reqno;
@@ -10,6 +10,14 @@ public class request {
 
     public void setReqno(String reqno) {
         this.reqno = reqno;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getDate() {
