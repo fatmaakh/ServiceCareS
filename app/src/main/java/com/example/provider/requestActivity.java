@@ -2,6 +2,7 @@ package com.example.provider;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ListView;
 
 import java.sql.SQLException;
@@ -12,7 +13,7 @@ public class requestActivity extends AppCompatActivity {
     getrequest g=new getrequest();
     Adapterrequest adapterrequest;
     ArrayList<request> data;
-    ListView listrequest;
+    RecyclerView listrequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +21,7 @@ public class requestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_request);
 
 
-        setContentView(R.layout.activity_request);
-        listrequest=(ListView)findViewById(R.id.listrequest);
+        listrequest=(RecyclerView) findViewById(R.id.listrequest);
         try {
             data=new ArrayList<>(g.getdata(requestActivity.this,loginacivity.username));
         } catch (SQLException e) {
@@ -29,7 +29,7 @@ public class requestActivity extends AppCompatActivity {
         }
 
         adapterrequest=new Adapterrequest(requestActivity.this,data);
-        listrequest.setAdapter(adapterrequest);
+        listrequest.setAdapter(adapterrequest); //hna el error
         adapterrequest.notifyDataSetChanged();
 
     }
